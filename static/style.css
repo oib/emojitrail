@@ -1,0 +1,162 @@
+/* style.css — visual layout for EmojiTrail */
+
+/* Define CSS variables for colors */
+:root {
+  --background-color: #fff9e6;
+  --text-color: #2c2c2c;
+  --button-color: #ffb347;
+  --button-hover-color: #ffd700;
+}
+
+/* General layout for page background and text style */
+body {
+  font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+}
+
+/* Container for centered content */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 90%; /* Ensures responsiveness */
+}
+
+/* Game title */
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+
+/* Current level display */
+#level {
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+#message {
+  font-size: 1em;
+  margin-top: 0.5em;
+  min-height: 1.4em; /* Allows growth if needed */
+}
+
+#options {
+  margin-top: 0.5em;
+  min-height: 1.2em; /* Allows growth if needed */
+}
+
+#trail {
+  margin-top: 2em;
+  min-height: 1.2em; /* Allows growth if needed */
+}
+
+#options span {
+    font-size: 1.5em; /* ~24px with 16px base */
+    padding: 0.2em;
+}
+
+#trail span {
+    font-size: 3em; /* ~48px with 16px base */
+    padding: 0.2em;
+}
+
+/* Display area for the emoji sequence */
+.emoji-box {
+  margin: 0.5em 0;
+  font-size: 1.2em; /* Smaller emojis */
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em; /* Reduced gap */
+}
+
+/* Emoji selection grid */
+.emoji-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.4em; /* Adjusted gap to prevent overlap */
+  margin: 1em 0;
+  overflow-x: auto;
+  padding: 0.3em;
+}
+
+/* Individual emojis in the selection grid */
+.emoji-grid span {
+  font-size: 1.2em; /* Smaller emojis */
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hover effect for emojis */
+.emoji-grid span:hover {
+  transform: scale(1.1); /* Reduced scale to prevent overlap */
+}
+
+/* Style for already picked emojis */
+.picked {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
+/* General button styling */
+button {
+  padding: 0.4em 1.2em;
+  font-size: 1em;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button hover color */
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Focus styles for accessibility */
+button:focus {
+  outline: 2px solid var(--text-color);
+}
+
+.emoji-grid span:focus {
+  outline: 2px solid var(--text-color);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5em;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  #level {
+    font-size: 0.8em;
+  }
+  .emoji-box {
+    font-size: 1em;
+    gap: 0.3em;
+  }
+  .emoji-grid {
+    gap: 0.2em;
+  }
+  .emoji-grid span {
+    font-size: 1em;
+  }
+  button {
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+  }
+  #message {
+    font-size: 1em;
+    min-height: 1em;
+  }
+}
