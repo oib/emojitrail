@@ -16,6 +16,13 @@ body {
   text-align: center;
   padding: 1em;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
 }
 
 /* Container for centered content */
@@ -158,5 +165,82 @@ button:focus {
   #message {
     font-size: 1em;
     min-height: 1em;
+  }
+}
+
+/* Footer Styles */
+.game-footer {
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid #B19CD9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.footer-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #E8D5F2;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 80px;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-link:hover {
+  color: #FFD700;
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.footer-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Mobile responsive footer */
+@media (max-width: 600px) {
+  .footer-link {
+    padding: 10px;
+    min-height: 70px;
+  }
+  
+  .footer-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  
+  .footer-links-container {
+    gap: 20px;
   }
 }
