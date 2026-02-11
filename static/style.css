@@ -16,13 +16,12 @@ body {
   text-align: center;
   padding: 1em;
   margin: 0;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 .content-wrapper {
-  flex: 1;
+  padding-bottom: 120px; /* Space for footer */
 }
 
 /* Container for centered content */
@@ -170,15 +169,16 @@ button:focus {
 
 /* Footer Styles */
 .game-footer {
-  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: rgba(0, 0, 0, 0.3);
   border-top: 2px solid #B19CD9;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-  margin-top: auto;
 }
 
 .footer-links-container {
