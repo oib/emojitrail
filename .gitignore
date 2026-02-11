@@ -5,6 +5,8 @@ __pycache__/
 # Virtuelle Umgebungen
 .venv/
 venv/
+env/
+ENV/
 
 # Betriebssystem-Dateien
 .DS_Store
@@ -19,3 +21,39 @@ Thumbs.db
 # IDEs und Editoren
 .vscode/
 .idea/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Windsurf
+.windsurf/
+
+# Snapshots
+.snapshots/
+
+# Additional Python
+*.so
+.Python
+*$py.class
+
+# Node modules (if using npm)
+node_modules/
+
+# OS specific
+*~
+
+# Cache
+.cache/
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Build artifacts
+build/
+dist/
