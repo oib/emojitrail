@@ -28,31 +28,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <header>
-            <h1>🎮 Emoji Trail 🎮</h1>
-            <div class="controls">
-                <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
-                <button id="joinBtn">Join Game</button>
-                <button id="shareBtn">Share Room</button>
-                <div class="score">Score: <span id="scoreValue">0</span></div>
-            </div>
-        </header>
-        
-        <main>
-            <canvas id="gameCanvas" width="800" height="600"></canvas>
-            <div class="game-info">
-                <p>Use arrow keys or WASD to move</p>
-                <p>Collect emojis to grow your trail!</p>
-                <p>Players online: <span id="playerCount">0</span></p>
-            </div>
-        </main>
-        
-        <div id="gameOver" class="modal hidden">
-            <div class="modal-content">
-                <h2>Game Over!</h2>
-                <p>Your score: <span id="finalScore">0</span></p>
-                <button id="restartBtn">Play Again</button>
+    <div class="main-content">
+        <div class="game-container">
+            <header>
+                <h1>🎮 Emoji Trail 🎮</h1>
+                <div class="controls">
+                    <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
+                    <button id="joinBtn">Join Game</button>
+                    <button id="shareBtn">Share Room</button>
+                    <div class="score">Score: <span id="scoreValue">0</span></div>
+                </div>
+            </header>
+            
+            <main>
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <div class="game-info">
+                    <p>Use arrow keys or WASD to move</p>
+                    <p>Collect emojis to grow your trail!</p>
+                    <p>Players online: <span id="playerCount">0</span></p>
+                </div>
+            </main>
+            
+            <div id="gameOver" class="modal hidden">
+                <div class="modal-content">
+                    <h2>Game Over!</h2>
+                    <p>Your score: <span id="finalScore">0</span></p>
+                    <button id="restartBtn">Play Again</button>
+                </div>
             </div>
         </div>
     </div>

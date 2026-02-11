@@ -9,9 +9,11 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .game-container {
@@ -21,6 +23,16 @@ body {
     padding: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 header {
@@ -181,15 +193,14 @@ main {
 
 /* Footer Styles */
 .game-footer {
-    position: relative;
     width: 100vw;
     background: rgba(0, 0, 0, 0.3);
     border-top: 2px solid #B19CD9;
-    margin-top: 40px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .footer-links-container {
